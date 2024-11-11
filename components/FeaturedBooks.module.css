@@ -1,0 +1,70 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .gridContainer {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bookCard {
+  border: 1px solid #aaecb0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  background-color: #aaecb0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bookCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.bookTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s;
+}
+
+.bookTitle:hover {
+  color: #3182ce;
+}
+
+.bookDescription {
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  text-align: justify;
+}
+
+.viewDetails {
+  color: #3182ce;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.1rem;
+  align-self: flex-start;
+  transition: color 0.3s;
+}
+
+.viewDetails:hover {
+  text-decoration: underline;
+  color: #2b6cb0;
+}

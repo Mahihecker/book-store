@@ -1,0 +1,49 @@
+.authorList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.authorItem {
+  background: linear-gradient(135deg, #aa85ff, #ff62f7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.authorItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.authorLink {
+  text-decoration: none;
+  color: #f3003d;
+  font-weight: 600;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.authorLink:hover {
+  text-decoration: underline;
+  color: #00a33e;
+}
+
+.authorLink::before {
+  content: "👤";
+  font-size: 1.2rem;
+  color: #f3cf00;
+  transition: color 0.3s;
+}
+
+.authorItem:hover .authorLink::before {
+  color: #26a300;
+}
